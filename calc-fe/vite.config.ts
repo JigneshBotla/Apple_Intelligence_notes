@@ -4,7 +4,8 @@ import eslint from 'vite-plugin-eslint';
 import { defineConfig } from "vite"
  
 export default defineConfig({
-  plugins: [react(),eslint()],
+  root: '.',  // Add this to ensure it's pointing to the right directory
+  plugins: [react(), eslint()],
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
